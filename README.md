@@ -49,8 +49,8 @@ Anaconda は，分析をするためのライブラリが大量に入ってい�
 
 ### 仮想環境作成
 1. command prompt もしくは terminal 起動
-1. （もし miniconda 以外で python をインストールしている方は) 現時点でのPythonの path 確認
-    + Python の path とは：現在のターミナルで実行する時に呼び出している python が格納されているディレクトリへのパスです
+1. （もし miniconda 以外で python をインストールしている場合は) 現時点でのPythonの path 確認
+    + Python の path とは： 今開いているのターミナルで実行出来るPythonがインストールされているディレクトリ
     ```bash
     # mac / linux 
     which python
@@ -59,25 +59,31 @@ Anaconda は，分析をするためのライブラリが大量に入ってい�
     # windows 
     where python
     ``` 
-1. 仮想環境作成
-    anaconda/miniconda で仮想環境を作るには，`conda create` というコマンドを実行します．そこへ仮想環境名とPythonのバージョンを指定します．
+1. **仮想環境作成**
+    anaconda/miniconda で仮想環境を作るには，`conda create` というコマンドを実行します．実行コマンドは：
     ```bash
     conda create --name <仮想環境名> python=<pythonのバージョン>
     ``` 
+
     例：py38という名前で，python3.8の環境を作成する．
     ```bash
     conda create --name py38 python=3.8
     ``` 
-    + 名前は任意です．なんでも構いません．
-    + 名前を変えれば，いくつでも仮想環境を作成することが出来ます．私は python3.6，3.7，3.8と3つ別々に環境を作っています．
+    + 名前は任意です．なんでも構いません．よく使う名前は，install する python のバージョンや，特定の作業名（web-scraping ) など．
+    + いくつでも仮想環境を作成することが出来ます．私は python3.6，3.7，3.8と3つ別々に環境を作っています．
 
 ### 仮想環境に入る
-仮想環境を作成しても，仮想環境に入らないと以前のPythonを使用することになります．基本的には「**ターミナルを立ち上げるたびに毎回仮想環境に入るクセ**」をまず付けて下さい．    
+仮想環境を作成後，**仮想環境に入ってはじめてその環境のPythonを使用**することになります．これはターミナルもしくはコマンドプロンプトを立ち上げるたびに毎回必ず入らなくてはいけません．よってまず「**ターミナルを立ち上げたら毎回仮想環境に入るクセ**」をまず付けて下さい．    
+
+（注：bashやエディタの設定等で，仮想環境に自動で入る設定がありますが，まずは自分で入るクセを付けて下さい．そういうのをめんどくさがる人は，たいてい後で必ず「環境がぶつかって動かなくなった」みたいな（アホ）コメントを言ってきがち．）
+
 1. 環境へ入る
     ```bash
-    conda acitivate py38
+    # conda acitivate <仮想環境名>
+    # 例
+    conda activate py38
     ```
-1. path を確認．最初の確認したパスではなく，仮想環境下のPythonへのパスが出てきたハズです．
+1. path を確認．仮想環境下のPythonへのパスが出てきたハズです．
     ```bash
     # mac / linux 
     which python
@@ -86,16 +92,30 @@ Anaconda は，分析をするためのライブラリが大量に入ってい�
     # windows 
     where python
     ``` 
+    この，`which python` や `where python` もクセ付けると幸せになると思います．
+    
 
 ### 必要なライブラリをインストール
 
 1. 仮想環境に入る
-1. [Anaconda Cloud](https://anaconda.org/) で目的のライブラリを検索。 もしくは、 ` anaconda install <ライブラリ名> ` で検索してみる
+1. [Anaconda Cloud](https://anaconda.org/) で目的のライブラリを検索。 もしくは、 `anaconda install <ライブラリ名>` でググる．
 1. `To install this package with conda run:` で示されたコマンドを仮想環境で実行
 1. anaconda で提供されていない場合
     1. 仮想環境に入っている pip でインストールする
     1. https://pypi.org/ で目的のライブラリを検索。もしくは`pip install <ライブラリ名>` で検索
     1. `pip install xxxxxxxx` で示されたコマンドを仮想環境で実行
+
+### 作成した仮想環境を削除したい場合
+
+```bash
+# conda remove -n <仮想環境名> --all
+# 例
+conda remove -n py37 --all
+```
+
+### miniconda 自体をアンインストール
++ windows [Uninstalling conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/windows.html#uninstalling-conda)
++ mac [Uninstalling Anaconda or Miniconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/macos.html#uninstalling-anaconda-or-miniconda)
 
 ## 練習
 
