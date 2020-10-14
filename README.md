@@ -10,16 +10,16 @@ python のインストール方法として
 
 という方法があります．
 
-どのインストール方法でも構いませんが，Fintalkでは pandas / numpy / jupyter をつかった株式分析をメインに行うので，その環境が一度に揃う <font color=red>**Anaconda の軽量版 Miniconda**</font>を使います．
+どのインストール方法でも構いませんが，Fintalkでは pandas / numpy / jupyter をつかった株式分析をメインに行うので，その環境を手軽に備えることができる <font color=red>**Anaconda の軽量版 Miniconda**</font>を使います．
 
 ### なぜ miniconda 
 
-anaconda は，分析をするためのライブラリが大量に入っている「全部入り」状態なのでとてもスペースを食ってしまいます．
+Anaconda は，分析をするためのライブラリが大量に入っている「全部入り」状態なのでとてもスペースを食ってしまいます．
 
-いっぽう，minicondaは， python と conda しか入っていないので，自分に必要なライブラリを適宜入れていけばよく，非力なマシンでも問題ありません．
+いっぽう，minicondaは， python と conda しか入っていないので，自分に必要なライブラリを適宜入れていけばよく，非力なマシンでも問題ありません．よって Fintalk では miniconda を採用することにします．
 
 
-### 大まかな流れ
+### インストールと環境構築までの大まかな流れ
 
 1. miniconda インストール
 1. 仮想環境の作成（初回のみ）
@@ -28,22 +28,22 @@ anaconda は，分析をするためのライブラリが大量に入ってい�
 
 ### 仮想環境とは
 
-しばしば，「環境がぶつかって動かなくなった」みたいな（アホ）コメントをインターネッツでお見かけしますがそのような情弱行動を起こさない用にするための一般教養が，仮想環境構築です．
+しばしば，「環境がぶつかって動かなくなった」みたいな（アホ）コメントをインターネッツでお見かけしますが，そのような情弱行動を起こさない用にするための一般教養が，仮想環境構築です．
 
 イメージとしては，
 
-> Pythonを実行する時は、毎回必ずインストールした場所からPythonを実行する
+> Pythonを実行するための場所を用意すること
 
 です．そして
 
-> そのような場所を複数作って構わない
+> そのような場所を複数作って構わない．
 
 ということを覚えておいて下さい．その場所のことを仮想環境と呼びます．
 
 ## install 
 
-+ windows: `install/windows/install.md`
-+ mac: `install/mac/install.md` 
++ windows: https://github.com/fintalk/study-anaconda/tree/main/install/windows
++ mac: https://github.com/fintalk/study-anaconda/tree/main/install/mac
 
 ## 環境構築
 
