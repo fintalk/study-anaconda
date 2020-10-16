@@ -149,6 +149,20 @@ conda remove -n py37 --all
 ### 仮想環境に入ったつもりで入っていない
 + 確認方法：ターミナルを開いたら必ず `where python` もしくは `which python` でどの python を実行しようとしているか常に確認
 
+### 配布された jupyter notebook にマジックコマンドがある
+
+たとえば， https://github.com/noguhiro2002/100knocks-preprocess_ForColab-AzureNotebook/blob/master/preprocess_knock_Python_Colab.ipynb の最初のセルに， pip でライブラリをインストールするコマンドがあります．
+```python
+# pipでオリジナルの解答に必要なライブラリーをインストール
+!pip install --upgrade pip
+!pip install -U pandas numpy scikit-learn imbalanced-learn
+```
+
+こういうセルを見かけら，実行する前にコメントアウトして下さい．
+
+そして，仮想環境下で conda でインストールして下さい．
+
+
 
 
 
