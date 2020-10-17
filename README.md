@@ -108,7 +108,7 @@ conda でソフトウェアをインストールする時，すでにインス�
     # 例
     $ conda activate py38
     ```
-1. path を確認。
+1. path を確認。先程 `現時点でのPythonの path を確認` で確認したパスとは違う、今作った仮想環境へのパスが表示されるはずです。
     ```bash
     # mac / linux 
     $ which python
