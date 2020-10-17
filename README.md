@@ -166,7 +166,7 @@ $ conda remove -n py37 --all
 1. 以下のライブラリをインストールして下さい。※一部 conda ではインストールできないライブラリがあります。
     + numpy 
     + jupyter
-    + bueatifulsoup
+    + beautifulsoup
     + requests-html
 1. 一度ターミナルをクローズして下さい
 1. 再度 ターミナルをオープンして、仮想環境に入り、pythonのインタプリタに入って、上記ライブラリを import してみてください。エラーがでなければ、練習問題は終りです。
