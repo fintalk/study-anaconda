@@ -60,7 +60,7 @@ conda であるソフトウェアをインストールする時，すでにイ�
 ## 環境構築
 
 ### 仮想環境作成
-1. command prompt もしくは terminal 起動
+1. (win) anaconda prompt もしくは (mac/linux) terminal 起動
 1. （もし miniconda 以外で python をインストールしている場合は) 現時点でのPythonの path 確認
     + Python の path とは： 今開いているのターミナルで実行出来るPythonがインストールされているディレクトリ
     ```bash
