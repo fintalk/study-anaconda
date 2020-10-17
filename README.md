@@ -59,27 +59,35 @@ conda であるソフトウェアをインストールする時，すでにイ�
 
 ## 環境構築
 
+### はじめに
++ ターミナルもしくはanaconda promptは、ここではまとめて **ターミナル**と称します。
++ ターミナルでインプットするコマンドの前には `$` もしくは `>` を付けています。それがついていない場合は出力例です。
++ ターミナルでインプットするコマンドは `$` 以降のコマンドだけインプットして下さい
++ `#` はコメントです。
+
 ### 仮想環境作成
-1. (win) anaconda prompt もしくは (mac/linux) terminal 起動
-1.  現時点でのPythonの path 確認
+1. ターミナルもしくは anaconda prompt 起動（以下、ターミナルと称する）
+1.  現時点でのPythonの path を確認
     + Python の path とは： 今開いているのターミナルで実行出来るPythonがインストールされているディレクトリ
+    
     ```bash
     # mac / linux 
-    which python
+    $ which python
     ```
+    
     ```bash
-    # windows 
-    where python
+    # windows
+    > where python
     ``` 
 1. **仮想環境作成**
     anaconda/miniconda で仮想環境を作るには，`conda create` というコマンドを実行します．実行コマンドは：
     ```bash
-    conda create --name <仮想環境名> python=<pythonのバージョン>
+    $ conda create --name <仮想環境名> python=<pythonのバージョン>
     ``` 
 
     例：py38という名前で，python3.8の環境を作成する．
     ```bash
-    conda create --name py38 python=3.8
+    $ conda create --name py38 python=3.8
     ``` 
     + 名前は任意です．なんでも構いません．よく使う名前は，install する python のバージョンや，特定の作業名（web-scraping ) など．
     + いくつでも仮想環境を作成することが出来ます．私は python3.6，3.7，3.8と3つ別々に環境を作っています．
@@ -93,16 +101,16 @@ conda であるソフトウェアをインストールする時，すでにイ�
     ```bash
     # conda acitivate <仮想環境名>
     # 例
-    conda activate py38
+    $ conda activate py38
     ```
 1. path を確認．仮想環境下のPythonへのパスが出てきたハズです．
     ```bash
     # mac / linux 
-    which python
+    $ which python
     ```
     ```bash
     # windows 
-    where python
+    > where python
     ``` 
     この，`which python` や `where python` もクセ付けると幸せになると思います．
     
@@ -117,12 +125,26 @@ conda であるソフトウェアをインストールする時，すでにイ�
     1. https://pypi.org/ で目的のライブラリを検索。もしくは`pip install <ライブラリ名>` で検索
     1. `pip install xxxxxxxx` で示されたコマンドを仮想環境で実行
 
+### 作成済みの仮想環境リストを表示
+
+`conda env list` で作成した仮想環境リストを取得できます。また、現在のターミナルで有効な仮想環境には、 `*` マークがついています。例：
+
+```bash
+$ conda env list
+# conda environments:
+#
+base                     /home/username/miniconda3
+env_zipline              /home/username/miniconda3/envs/env_zipline
+py36                     /home/username/miniconda3/envs/py36
+py37                  *  /home/username/miniconda3/envs/py37
+```
+
 ### 作成した仮想環境を削除したい場合
 
 ```bash
 # conda remove -n <仮想環境名> --all
 # 例
-conda remove -n py37 --all
+$ conda remove -n py37 --all
 ```
 
 ### miniconda 自体をアンインストール
