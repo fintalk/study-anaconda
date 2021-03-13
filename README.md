@@ -57,6 +57,7 @@ conda でソフトウェアをインストールする時，すでにインス�
 
 + windows: https://github.com/fintalk/study-anaconda/tree/main/install/windows
 + mac: https://github.com/fintalk/study-anaconda/tree/main/install/mac
++ linux: https://github.com/fintalk/study-anaconda/tree/main/install/linux
 
 ## 環境構築
 
